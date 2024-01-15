@@ -20,3 +20,8 @@ int main() {
 
 // Parser
 
+
+// Main
+int main() {
+    return 0;
+}

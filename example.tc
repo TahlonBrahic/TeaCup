@@ -6,3 +6,5 @@ list keywords = [return, break, continue,
                 boolean, list, string, object, integer, float, const,
                 if, else, switch, while,
                 static]
+
+return 0
