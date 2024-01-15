@@ -1,5 +1,6 @@
 ##include <stdio.h>
 
+// Lexer
 typedef enum {
     TOKEN_INT,
     TOKEN_PLUS,
@@ -16,3 +17,6 @@ typedef struct {
 int main() {
     return 0;
 }
+
+// Parser
+
