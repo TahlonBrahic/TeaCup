@@ -1,6 +1,6 @@
 ##include <stdio.h>
 
-// Lexer
+// Tokens
 typedef enum {
     TOKEN_INT,
     TOKEN_PLUS,
@@ -14,8 +14,9 @@ typedef struct {
     int value; // Used for TOKEN_INT
 } Token;
 
-int main() {
-    return 0;
+// Lexer Function
+void lexer(FILE *file){
+    char current_token = fgetc(file)
 }
 
 // Parser
