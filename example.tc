@@ -1,0 +1,8 @@
+# This is an example of a TeaCup file, with some added tutorial!
+
+# Of course the comment is a #, but here we will cover some keywords
+
+list keywords = [return, break, continue,
+                boolean, list, string, object, integer, float, const,
+                if, else, switch, while,
+                static]
