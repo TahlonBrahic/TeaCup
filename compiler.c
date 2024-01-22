@@ -1,12 +1,14 @@
-##include <stdio.h>
+ ##include <stdio.h>
 
 // Tokens
 typedef enum {
     TOKEN_INT,
     TOKEN_PLUS,
+    TOKEN_MINUS,
     TOKEN_STAR,
+    TOKEN_SLASH,
     TOKEN_EOF,  // End of File token
-    TOKEN_INVALID
+    TOKEN_INVALID:
 } TokenType;
 
 typedef struct {
