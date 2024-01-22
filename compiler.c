@@ -8,7 +8,7 @@ typedef enum {
     TOKEN_STAR,
     TOKEN_SLASH,
     TOKEN_EOF,  // End of File token
-    TOKEN_INVALID:
+    TOKEN_INVALID
 } TokenType;
 
 typedef struct {
@@ -35,6 +35,17 @@ static int next(void) {
   }
 
   return c;
+}
+
+// Skips whitespace
+static int skip(void) {
+  int c;
+
+  c = next();
+  while = (' ' == c || '\t' ==c || '\n' == c || '\r' == c || '\f' == c) {
+    c = next();
+  }
+  return (c);
 }
 
 void lexer(FILE *file){
