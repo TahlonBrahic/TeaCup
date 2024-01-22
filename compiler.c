@@ -16,7 +16,27 @@ typedef struct {
     int value; // Used for TOKEN_INT
 } Token;
 
-// Lexer Function
+// Lexer Functions
+
+
+// Retrieves the next character from the input file.
+static int next(void) {
+  int c;
+
+  if (Putback) {
+    c = Putback;
+    Putback = 0;
+    return c;
+  }
+
+  c = fgetc(file);
+  if ('\n' == c) {
+    Line++
+  }
+
+  return c;
+}
+
 void lexer(FILE *file){
     char current_token = fgetc(file)
 }
