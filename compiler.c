@@ -48,8 +48,16 @@ static int skip(void) {
   return (c);
 }
 
-void lexer(FILE *file){
-    char current_token = fgetc(file)
+void lexer(struct token *t){
+  int c;
+  
+  switch (c) {
+    case EOF:
+      return (0);
+    case ''
+  }
+
+  return (1)
 }
 
 // Parser
