@@ -1,4 +1,4 @@
- ##include <stdio.h>
+ #include <stdio.h>
 
 // Tokens
 typedef enum {
@@ -32,7 +32,7 @@ static int next(void) {
   c = fgetc(file);
   if ('\n' == c) {
     Line++
-  }
+  };
 
   return c;
 }
@@ -42,7 +42,7 @@ static int skip(void) {
   int c;
 
   c = next();
-  while = (' ' == c || '\t' ==c || '\n' == c || '\r' == c || '\f' == c) {
+  while (' ' == c || '\t' ==c || '\n' == c || '\r' == c || '\f' == c) {
     c = next();
   }
   return (c);
@@ -55,10 +55,10 @@ void lexer(struct token *t){
     case EOF:
       return (0);
     case ''
-  }
+  };
 
   return (1)
-}
+};
 
 // Parser
 
