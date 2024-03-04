@@ -53,3 +53,7 @@ dkms.conf
 
 # VIM files
 *.swo
+
+# VSCODE files
+
+*.vscode
