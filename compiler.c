@@ -18,6 +18,18 @@ typedef struct {
 
 // Lexer Functions
 
+void lexer(struct token *t){
+  int c;
+  
+  switch (c) {
+    case EOF:
+      return (0);
+    case ''
+  };
+
+  return (1)
+};
+
 
 // Retrieves the next character from the input file.
 static int next(void) {
@@ -35,7 +47,7 @@ static int next(void) {
   };
 
   return c;
-}
+};
 
 // Skips whitespace
 static int skip(void) {
@@ -46,18 +58,6 @@ static int skip(void) {
     c = next();
   }
   return (c);
-}
-
-void lexer(struct token *t){
-  int c;
-  
-  switch (c) {
-    case EOF:
-      return (0);
-    case ''
-  };
-
-  return (1)
 };
 
 // Parser
@@ -66,4 +66,4 @@ void lexer(struct token *t){
 // Main
 int main() {
     return 0;
-}
+};
