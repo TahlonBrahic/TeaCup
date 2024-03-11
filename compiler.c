@@ -17,17 +17,14 @@ typedef struct {
 } Token;
 
 // Lexer Functions
-
-void lexer(struct token *t){
+lexer(struct Token *t){
   int c;
   
   switch (c) {
     case EOF:
-      return (0);
-    case ''
+      return 0;
   };
-
-  return (1)
+  return 1;
 };
 
 
@@ -57,7 +54,7 @@ static int skip(void) {
   while (' ' == c || '\t' ==c || '\n' == c || '\r' == c || '\f' == c) {
     c = next();
   }
-  return (c);
+  return c;
 };
 
 // Parser
