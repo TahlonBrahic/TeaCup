@@ -7,4 +7,4 @@ list keywords = [return, break, continue,
                 if, else, switch, while,
                 static]
 
-return 0
+function introduction(): ptc "Hello world!"
