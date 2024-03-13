@@ -30,6 +30,20 @@ static int lexer(struct Token *t){
   return 1;
 };
 
+static int scanint(int c) {
+  int k, val = 0;
+
+  // Convert each character into an integer
+  while ((k = chrpos("0123456789")) >= 0) {
+    val = val * 10 +k;
+    c = next;
+  }
+
+  // Non-intenger characters
+  putback(c);
+  return val;
+}
+
 // Retrieves the next character from the input file.
 static int next(void) {
   int c;
