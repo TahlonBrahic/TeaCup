@@ -34,7 +34,7 @@ static int scanint(int c) {
   int k, val = 0;
 
   // Convert each character into an integer
-  while ((k = chrpos("0123456789")) >= 0) {
+  while ((k = chrpos("0123456789", c)) >= 0) {
     val = val * 10 +k;
     c = next();
   }
