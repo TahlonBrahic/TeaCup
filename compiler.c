@@ -13,7 +13,7 @@ static void init() {
 char *tokstr[] = { "int", "+", "-", "*", "/", "eof", "invalid" };
 
 static void scanfile() {
-    struct Token T;
+    Token T;
     while (lexer(&T)) {
         printf("Token %s", tokstr[T.type]);
         if (T.type == TOKEN_INT)
@@ -23,9 +23,6 @@ static void scanfile() {
 }
 
 int main(int argc, char *argv[]) {
-    if (argc != 2)
-        usage(argv[0]);
-
     init();
 
     if ((Infile = fopen(argv[1], "r")) == NULL) {

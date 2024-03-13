@@ -1,7 +1,7 @@
 #include "tokens.h"
 #include "data.h"
 
-static int lexer(struct Token *t){
+static int lexer(Token *t){
   int c;
   c = skip();
   switch (c) {
@@ -36,7 +36,7 @@ static int scanint(int c) {
   // Convert each character into an integer
   while ((k = chrpos("0123456789")) >= 0) {
     val = val * 10 +k;
-    c = next;
+    c = next();
   }
 
   // Non-intenger characters
