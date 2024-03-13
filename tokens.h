@@ -19,4 +19,4 @@ typedef struct {
     int value; // Used for TOKEN_INT
 } Token;
 
-int scan(struct token *t);
+int lexer(struct token *t);

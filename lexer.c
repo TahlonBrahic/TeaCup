@@ -43,6 +43,7 @@ static int next(void) {
   return c;
 };
 
+// Allows the lexer to 'un-read' a character by storing it in the putback.
 static void putback(int c) {
   Putback = c;
 }
