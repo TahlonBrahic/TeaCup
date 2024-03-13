@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
     init();
 
     if ((Infile = fopen(argv[1], "r")) == NULL) {
-        printf(stderr, "Unable to open %s: %s\n", argv[1], strerror(errno));
+        fprintf(stderr, "Unable to open %s: %s\n", argv[1], strerror(errno));
         exit(1);
     }
 
