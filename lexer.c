@@ -6,19 +6,24 @@ static int lexer(struct Token *t){
   c = skip();
   switch (c) {
     case '+':
-      t->token = TOKEN_PLUS;
+      t->type = TOKEN_PLUS;
+      break;
     case '-':
-      t->token = TOKEN_MINUS;
+      t->type = TOKEN_MINUS;
+      break;
     case '*':
-      t->token = TOKEN_STAR;
+      t->type = TOKEN_STAR;
+      break;
     case '/':
-      t->token = TOKEN_SLASH;
+      t->type = TOKEN_SLASH;
+      break;
     case EOF:
+      t->type = TOKEN_EOF;
       return 0;
     default:
       if (isdigit(c)) {
-        t->intvalue = scanint(c);
-        t->token = TOKEN_INT;
+        t->value = scanint(c);
+        t->type = TOKEN_INT;
         break;
       }
   };
