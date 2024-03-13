@@ -14,7 +14,7 @@ char *tokstr[] = { "int", "+", "-", "*", "/", "eof", "invalid" };
 
 static void scanfile() {
     struct Token T;
-    while (scan(&T)) {
+    while (lexer(&T)) {
         printf("Token %s", tokstr[T.type]);
         if (T.type == TOKEN_INT)
             printf(", value %d", T.value);
