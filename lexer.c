@@ -44,7 +44,7 @@ static int scanint(int c) {
   return val;
 }
 
-static int chrpos(char *s, int c) {
+int chrpos(char *s, int c) {
   char *p;
 
   p = strchr(s, c);
