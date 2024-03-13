@@ -44,6 +44,13 @@ static int scanint(int c) {
   return val;
 }
 
+static int chrpos(char *s, int c) {
+  char *p;
+
+  p = strchr(s, c);
+  return (p ? p - s : -1);
+}
+
 // Retrieves the next character from the input file.
 static int next(void) {
   int c;
