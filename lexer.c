@@ -1,7 +1,7 @@
 #include "tokens.h"
 #include "data.h"
 
-static int lexer(Token *t){
+int lexer(Token *t){
   int c;
   c = skip();
   switch (c) {
