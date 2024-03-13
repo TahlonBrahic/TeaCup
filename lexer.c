@@ -61,7 +61,7 @@ int next(void) {
     return c;
   }
 
-  c = fgetc(file);
+  c = fgetc(Infile);
   if ('\n' == c) {
     Line++;
   };
