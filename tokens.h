@@ -20,7 +20,7 @@ typedef struct {
 } Token;
 
 int lexer(Token *t);static int scanint(int c);
-static int next(void);
-static void putback(int c);
-static int skip(void);
+int next(void);
+void putback(int c);
+int skip(void);
 int chrpos(char *s, int c);

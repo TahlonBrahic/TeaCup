@@ -30,7 +30,7 @@ int lexer(Token *t){
   return 1;
 };
 
-static int scanint(int c) {
+int scanint(int c) {
   int k, val = 0;
 
   // Convert each character into an integer
@@ -52,7 +52,7 @@ int chrpos(char *s, int c) {
 }
 
 // Retrieves the next character from the input file.
-static int next(void) {
+int next(void) {
   int c;
 
   if (Putback) {
@@ -70,12 +70,12 @@ static int next(void) {
 };
 
 // Allows the lexer to 'un-read' a character by storing it in the putback.
-static void putback(int c) {
+void putback(int c) {
   Putback = c;
 }
 
 // Skip past white space, newlines, ect...
-static int skip(void) {
+int skip(void) {
   int c;
 
   c = next();
